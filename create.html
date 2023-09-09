@@ -2,11 +2,11 @@
 <head>
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
 
 </head>
 
-<d>
+<body>
 
     <header id="site.head" class="">
         <article>اطلاعات پایه</article>
@@ -14,62 +14,77 @@
     </header>
 
     <div class="container">
-    <div class="input-item">
 
-        <h4> جنسیت: </h4>
-        <input type="radio" name="gender" id="male" value="male">
-        <label for="male">آقا</label>
+        <div class="input-item">
+            <label for="firstName">نام</label>
+    
+            <input type="text" placeholder="نام خود را وارد کنید" id="firstName">
 
-        <input type="radio" name="gender" id="female" value="female">
-        <label for="female">خانم</label>
-    </div>
+            <label for="lastName"> نام خانوادگی</label>
+    
+            <input type="text" placeholder="نام خانوادگی خود را وارد کنید" id="lastName">
 
-    <div class="input-item">
+        </div>
+
+
+        <div class="input-item">
+            <h4> جنسیت: </h4>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">آقا</label>
+
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">خانم</label>
+       </div>
+
+        <div class="input-item">
          
-        <h4> وضعیت تاهل: </h4>
-        <input type="radio" name="matrimony" id="married" value="married">
-        <label for="married"> متاهل </label>
+            <h4> وضعیت تاهل: </h4>
+            <input type="radio" name="matrimony" id="married" value="married">
+            <label for="married"> متاهل </label>
 
-        <input type="radio" name="matrimony" id="single" value="single">
-        <label for="single"> مجرد </label>
-    </div>
+            <input type="radio" name="matrimony" id="single" value="single">
+            <label for="single"> مجرد </label>
+        </div>
 
 
-    <div class="input-item">
-        <label for="firstName">نام</label>
-    
-    <input type="text" placeholder="نام خود را وارد کنید" id="firstName">
-
-    <label for="lastName"> نام خانوادگی</label>
-    
-    <input type="text" placeholder="نام خانوادگی خود را وارد کنید" id="lastName">
-
-    </div>
-    
-
-    <div class="input-item">
-        <article> تحصیلات : </article>
-        <select dir="rtl">
-            <option value="elementary">سیکل</option>
-            <option value="diploma">دیپلم</option>
-            <option value="bachelor">لیسانس</option>
-            <option value="msc">فوق لیسانس</option>
-            <option value="phd">دکترا</option>
-        </select>
-    </div>
+        <div class="input-item">
+            <h4> تحصیلات : </h4>
+            <select dir="rtl">
+                <option value="elementary">سیکل</option>
+                <option value="diploma">دیپلم</option>
+                <option value="bachelor">لیسانس</option>
+                <option value="msc">فوق لیسانس</option>
+                <option value="phd">دکترا</option>
+            </select>
+        </div>
 
  
-    <div class="input-item">
-        <article id=> سابقه کاری خود را وارد کنید : </article>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div class="input-item">
+            <h4> سابقه کاری خود را وارد کنید : </h4>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="input-item">
+            <h4> وضعیت سربازی </h4>
+            <select dir="rtl">
+                <option value="">مشمول</option>
+                <option value="">در حال خدمت</option>
+                <option value="">پایان خدمت</option>
+                <option value="">معاف</option>
+                <option value="">معافیت تحصیلی</option>
+                <option value="">معافیت پزشکی</option>
+                <option value="">معافیت غیر پزشکی</option>
+            </select>
+        </div>
+
+
+        <div class="input-item">
+            <button type="submit">ارسال اطلاعات</button>
+        </div>
+
     </div>
 
 
-    <div class="input-item">
-        <button type="submit">ارسال اطلاعات</button>
-    </div>
-
-</div>
 </form>
 
 </body>
