@@ -9,40 +9,43 @@
 <body>
 
     <header id="site.head" class="">
-        <article>اطلاعات پایه</article>
-        <article>سوابق تحصیلی</article>
+        <h3>اطلاعات پایه</h3>
+        <h3>سوابق تحصیلی</h3>
+
     </header>
+
+    <form>
 
     <div class="container">
 
         <div class="input-item">
             <label for="firstName">نام</label>
     
-            <input type="text" placeholder="نام خود را وارد کنید" id="firstName">
+            <input type="text" placeholder="نام خود را وارد کنید" id="firstName" required>
 
             <label for="lastName"> نام خانوادگی</label>
     
-            <input type="text" placeholder="نام خانوادگی خود را وارد کنید" id="lastName">
+            <input type="text" placeholder="نام خانوادگی خود را وارد کنید" id="lastName" required>
 
         </div>
 
 
         <div class="input-item">
             <h4> جنسیت: </h4>
-            <input type="radio" name="gender" id="male" value="male">
+            <input type="radio" name="gender" id="male" value="male" required>
             <label for="male">آقا</label>
 
-            <input type="radio" name="gender" id="female" value="female">
+            <input type="radio" name="gender" id="female" value="female" required>
             <label for="female">خانم</label>
        </div>
 
         <div class="input-item">
          
             <h4> وضعیت تاهل: </h4>
-            <input type="radio" name="matrimony" id="married" value="married">
+            <input type="radio" name="matrimony" id="married" value="married" required>
             <label for="married"> متاهل </label>
 
-            <input type="radio" name="matrimony" id="single" value="single">
+            <input type="radio" name="matrimony" id="single" value="single" required>
             <label for="single"> مجرد </label>
         </div>
 
@@ -84,7 +87,6 @@
 
     </div>
 
-
-</form>
+    </form>
 
 </body>
