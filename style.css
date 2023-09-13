@@ -7,7 +7,9 @@
     --wite: #fff;
     --light-color: #777;
     --light-bg: #eee;
-    --aqua: #156;
+    /* --aqua: #156; */
+    --aqua: rgb(9, 132, 136);
+
     --box-shadw: 0 5rem 10rem rgba(0, 0, 0, 0.1);
 }
 
@@ -36,23 +38,17 @@ html ::-webkit-scrollbar-thumb{
     border-radius: 3.125rem;
 }
 
-/* تلفن های هوشمند (نمای عمودی و افقی) ———- */
-
-@media screen and (min-width: 320px) and (max-width: 480px){
-
-    
-}
-
 /* تگ های بخش index */
 
 .indexbody{
-    background: linear-gradient(45deg, rgb(17, 128, 17), var(--blue));
+    background: linear-gradient(45deg, rgb(17, 128, 17), rgba(0,212,255,1) 100%);
+    background-repeat: no-repeat;
+    height: 40rem;
 }
 
 .welcome {
     color: var(--light-bg);
     border-radius: 0.5rem ;
-    
     padding: 0.25rem;
     text-align:right;
     direction: rtl;
@@ -86,8 +82,8 @@ img.welcome{
 
 /* تگ های بخش create */
 
-header{
-    background-color: var(--aqua); 
+header.create{
+    background-color: rgb(31, 31, 119); 
     color:yellow;
     padding: 2rem;
     text-align:center;
@@ -119,7 +115,6 @@ header{
     padding: 0.125rem;
     direction: rtl;
     display:block;
-    /**/
 }
 
 /* تگ های بخش demo */
@@ -128,6 +123,21 @@ header{
     display: grid;
     align-content: right;
     justify-content: right; /* می توان موقغیت یا محل قرارگیری آیتم های یک فلکس باکس را به صورت افقی می توان مشخص یا تعریف کرد */
+}
+
+.btn{
+    margin-top: 0.625rem;
+    display: inline-block;
+    padding: 0.4375rem 1.25rem;
+    border-radius: 0.3125rem;
+    background: var(--blue);
+    color: var(--wite);
+    font-size: 1.0625rem;
+}
+
+.btn:hover{
+    background: var(--black);
+    box-shadow: var(--box-shadw);
 }
 
 img .profile{
@@ -157,12 +167,46 @@ img .profile{
     را بپوشاند و مقایس را حفظ کند*/
     margin-bottom: 0.625rem;
 }
+
+.container .profile h3{
+    color: var(--black);
+    font-size: 1.25rem;
+}
+
+.container .profile p{
+    color: var(--blue);
+    padding: 0.312rem 0;
+    margin-bottom: 0.625rem;
+    font-size: 1.25rem;
+}
+
+.container .profile .share{
+    margin: 0.625rem;
+}
+
+.container .profile .share a{
+    height: 3.125rem;
+    width: 3.1225ram;
+    line-height: 3.125rem;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    color: var(--black);
+    background: var(--light-bg);
+}
+
+.container .profile .share a:hover{
+    /*با استفاده از شبه کلاس hover می توان استایل دلخواه برای وقتی که موس میره روی یک تگ مشخص کرد*/
+    background: var(--blue);
+    color: var(--wite);
+    box-shadow: var(--box-shadw);
+}
+
 .container .information{
     flex: 1 1 62.5rem;
     background: var(--wite);
 }
 
- div{
+/* div{
     border: 2rem;
     border-radius: 2rem;
     border-radius: 2rem;
@@ -174,4 +218,11 @@ img .profile{
     display: flex;
     flex-direction: row;
 
-} */
+}
+
+تلفن های هوشمند (نمای عمودی و افقی) ———- 
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+    
+}*/
