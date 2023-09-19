@@ -7,9 +7,7 @@
     --wite: #fff;
     --light-color: #777;
     --light-bg: #eee;
-    /* --aqua: #156; */
-    --aqua: rgb(9, 132, 136);
-
+    --aqua: #156;
     --box-shadw: 0 5rem 10rem rgba(0, 0, 0, 0.1);
 }
 
@@ -41,44 +39,60 @@ html ::-webkit-scrollbar-thumb{
 /* تگ های بخش index */
 
 .indexbody{
-    background: linear-gradient(45deg, rgb(17, 128, 17), rgba(0,212,255,1) 100%);
+    background: linear-gradient(45deg, rgb(17, 128, 17), var(--blue) 100%);
     background-repeat: no-repeat;
     height: 40rem;
 }
 
 .welcome {
+    font-size: 4rem;
     color: var(--light-bg);
     border-radius: 0.5rem ;
     padding: 0.25rem;
-    text-align:right;
+    /*text-align:right;
     direction: rtl;
-    float: right;
+    float: right;*/
     margin-right:auto;
     margin-left:auto;
-    display:block;
+    /*display:block;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     margin:5rem;
 }
 
-h1{
+h1,h2,h3,h4,h5,h6{
     text-align: center;
+    min-width: 5rem;
+    display: block;
+    float: right;
+    direction: rtl;
 }
 
 a{
-    color: yellow;
-    text-align:right;
+    font-size: 1.5rem;
+    color: var(--wite);
+    /*text-align:right;
     direction: rtl;
-    float: right;
+    float: right;*/
     margin: 0.3rem;
     padding: 0.2rem;
-    display: inline;
+    /*display: inline;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 
-img.welcome{
+/*img.welcome{
     width: 20rem;
     height: 20rem;
     clip-path: circle();
     margin: 5rem;
-}
+}*/
 
 /* تگ های بخش create */
 
@@ -104,17 +118,17 @@ header.create{
 .container{
     width: 100%;
     display: block;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     border: 2rem;
-
     padding: 6.25rem 9%;
     background: linear-gradient(45deg, rgb(17, 128, 17), var(--blue));
+    line-height: 3rem;
 }
 
 .input-item{
     padding: 0.125rem;
     direction: rtl;
-    display:block;
+    display: flex;
 }
 
 /* تگ های بخش demo */
@@ -123,6 +137,12 @@ header.create{
     display: grid;
     align-content: right;
     justify-content: right; /* می توان موقغیت یا محل قرارگیری آیتم های یک فلکس باکس را به صورت افقی می توان مشخص یا تعریف کرد */
+}
+
+.title{
+    font-size: 1.5625rem;
+    color: var(--blue);
+    margin-bottom: 0.9375rem;
 }
 
 .btn{
@@ -156,6 +176,7 @@ img .profile{
     position: sticky;
     top: 1.25rem; left: 0;
     border: 0.125rem solid var(--black);
+    gap: 1.5625rem;
 }
 
 .container .profile img{
@@ -169,7 +190,7 @@ img .profile{
 }
 
 .container .profile h3{
-    color: var(--black);
+    color: var(--light-color);
     font-size: 1.25rem;
 }
 
@@ -187,7 +208,7 @@ img .profile{
 .container .profile .share a{
     height: 3.125rem;
     width: 3.1225ram;
-    line-height: 3.125rem;
+    line-height: 3.125rem; /*میتوان یک فضا ( فاصله ) مشخصی را بین سطرهای یک متن / محتوا ایجاد و یا تعریف کرد. */
     font-size: 1.25rem;
     border-radius: 50%;
     color: var(--black);
@@ -204,25 +225,84 @@ img .profile{
 .container .information{
     flex: 1 1 62.5rem;
     background: var(--wite);
+    padding: 1.25rem 1.875rem;
 }
 
-/* div{
-    border: 2rem;
-    border-radius: 2rem;
-    border-radius: 2rem;
+.container .information .about p{
+    font-size: 1.0625rem;
+    line-height: 2;
+    padding: 0.312rem 0;
+    color: var(--light-color);
+}
 
-    display: block;
-    text-align:right; 
-    direction: rtl;
-    float: right;
+.container .information .about .box-container{
     display: flex;
-    flex-direction: row;
-
+    flex-wrap: wrap;
+    gap: 0.9375rem; /* با استفاده از ویژگی grid-gap در CSS میتوان یک فضای خالی مشخصی را در بین ستون و سطرهای یک گرید ایجاد و یا تعریف کرد*/
 }
 
-تلفن های هوشمند (نمای عمودی و افقی) ———- 
+/*.container .information .box-container .box{
+    flex: 1 1 15.625rem;
+}*/
+
+.container .information .box-container .box h3{ 
+    font-size: 0.9375rem;
+    padding: 0.625rem 0;
+    color: var(--black);
+}
+
+.container .information .box-container .box  h3 span{
+    color: var(--light-color);
+}
+
+.latin{
+    direction: ltr;
+}
+
+div.box-container {
+    direction:rtl;
+}
+
+.row {
+    display: block;
+}
+
+.row * {
+    display: inline;
+}
+
+/*تلفن های هوشمند (نمای عمودی و افقی) ———- 
 
 @media screen and (min-width: 320px) and (max-width: 480px){
 
     
 }*/
+
+label {
+    min-width: 10rem;
+    padding: 0.3rem;
+}
+
+.input-row{
+    display: inline-flex;
+    width: 3rem;
+}
+
+.input-row * {
+    display: inline;
+}
+
+input {
+    padding: 0.2rem;
+}
+
+
+textarea{
+    padding: 0.2rem;
+}
+
+button.submit {
+    float: right;
+    margin-right: 10rem;
+}
+
